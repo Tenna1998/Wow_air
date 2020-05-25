@@ -90,7 +90,7 @@ main{
 
 
 
-
+/* Footer section starts here */
 footer{
     display: grid;
     grid-template-columns: 3fr;
@@ -143,3 +143,119 @@ footer{
     margin: 10px;
     font-size: 4em;
 }
+
+
+
+/* Booking side starter her */ 
+.body_booking_page{
+    display: grid;
+ 
+}
+
+.check_in_button{
+    background-color: #b1257f;
+    color: white;
+    border: none;
+    font-weight: bold;
+    font-size: 1em;
+    max-width: 200px;
+    margin: 10px;
+    justify-self: end;
+}
+
+.travel_selector{
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    background-color: white;
+    justify-self: center;
+    align-self: center;
+    padding: 50px;
+}
+
+.from_p{
+    grid-column: 1;
+    grid-row: 1;
+    align-self: end;
+}
+
+.from{
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.to_p{
+    grid-column: 2;
+    grid-row: 1;
+    align-self: end;
+}
+
+.to{
+    grid-column: 2;
+    grid-row: 2;
+}
+
+input{
+    background-color: #b1257f;
+    border: none;
+    font-weight: bold;
+    font-size: 1em;
+    margin: 10px;
+}
+
+::placeholder{
+    color: white;
+    text-align: center;
+}
+
+.show_budget_calender{
+    
+    color: #b1257f;
+    font-weight: bold;
+    font-size: 1em;
+    margin: 10px;
+    grid-column: 1;
+    grid-row: 5;
+   
+}
+
+.search_button{
+    background-color:#b1257f;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    grid-column: 2;
+    grid-row: 7;
+    margin: 10px;
+    border: none;
+}
+
+/* Here is the styling for the honest fairs buttons */
+.Honest_fares_headline{
+    font-size: 8em;
+    color: #b1257f;
+    text-align: center;
+}
+
+.honest_fares_container{
+    justify-content: right;
+}
+
+.honest_fares_buttons{
+    background-color:#b1257f;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    border: none;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 40px;
+     
+}
+
+@media only screen and (max-width: 1200px){
+    .buttons{ background-color: transparent;
+        }
+      }

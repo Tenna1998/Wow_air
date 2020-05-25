@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booking</title>
-    <link rel="stylesheet" href="inspire_me.css">
+    <link rel="stylesheet" href="wow_air.css">
     <script src="https://kit.fontawesome.com/2921969fed.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="body_booking_page">
     <header>
         <img class="wow_air_logo" src="images/wow-logo2.png" alt="WOW Air logo">
         <section class="navbar">
@@ -15,8 +15,46 @@
             <button onclick="window.location.href = 'booking.html';" class="navbar_button">Book your flight</button>
             <button onclick="window.location.href = 'link';" class="navbar_button">Help</button>
         </section>
-           
     </header>
+
+            <button onclick="window.location.href = 'link';" class="check_in_button">Check in</button>
+
+        <section class="travel_selector">
+            <h3 class="from_p">From</h3>
+            <input class="from" type="text" placeholder="Where are you flying from?">
+            <h3 class="to_p">To</h3>
+            <input class="to" type="text" placeholder="Where are you flying to?">
+            <h3 class="show_budget_calender">Show budget calender</h3>
+            <br>
+            <button class="search_button">Search</button>
+        </section>
+
+        <section>
+                <h2 class="Honest_fares_headline">Honest fares</h2>
+            <section class="honest_fares_button_container">
+                <button class="honest_fares_buttons">Luggage</button>
+                <p class="honest_fares_buttons_paragraf">Luggage</p>
+                <button class="honest_fares_buttons">Food & drinks</button>
+                <p class="honest_fares_buttons_paragraf">Food & drinks</p>
+                <button class="honest_fares_buttons">Seats</button>
+                <p class="honest_fares_buttons_paragraf">Seats</p>
+                <button class="honest_fares_buttons">Entertainment</button>
+                <p class="honest_fares_buttons_paragraf">Entertainment</p>
+                <button class="honest_fares_buttons">Refund policy</button>
+                <p class="honest_fares_buttons_paragraf">Refund policy</p>
+            </section>
+            <br>
+            <article class="honest_fares_luggage">
+                <h2 class="honest_fares_luggage_heading">Luggage</h2>
+                <p>Everyone travels with luggage be it alone, as a couple or a family
+                    <br>
+                    In WOW world™ pack what you want and need for your journey without 
+                    having to worry about overweight charges
+                    <br>
+                    It is time for Honest Fares™</p>
+            </article>
+        </section>
+
     <footer>
         <section class="wow_air">
             <h2>WOW air</h2>
