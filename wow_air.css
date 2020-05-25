@@ -113,8 +113,10 @@ footer{
     background-image: url(images/backpacker.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
+    grid-template-columns: 1fr;
     display: grid;
- 
+    margin: 0%;
+    padding: 0%;
 }
 
 .check_in_button{
@@ -143,6 +145,10 @@ footer{
     grid-column: 1;
     grid-row: 1;
     align-self: end;
+    color: #b1257f;
+    font-size: 2em;
+    font-weight: bolder;
+    margin: 10px 10px 0px 10px;
 }
 
 .from{
@@ -154,6 +160,10 @@ footer{
     grid-column: 2;
     grid-row: 1;
     align-self: end;
+    color: #b1257f;
+    font-size: 2em;
+    font-weight: bolder;
+    margin: 10px 10px 0px 10px;
 }
 
 .to{
@@ -178,7 +188,7 @@ input{
     
     color: #b1257f;
     font-weight: bold;
-    font-size: 1em;
+    font-size: 2em;
     margin: 10px;
     grid-column: 1;
     grid-row: 5;
@@ -252,7 +262,131 @@ input{
     margin: 10px;
 }
 
-@media only screen and (max-width: 1200px){
-    .buttons{ background-color: transparent;
-        }
+
+
+
+/* Mindre skærme */
+
+@media only screen and (max-width: 1400px){
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .wow_air_logo {
+        display: none;
+    }
+    
+    .navbar_button{
+        color:#b1257f;
+        font-size: 2em;
+        margin: 20px;
+    }
+    
+    main{
+        display: grid;
+        grid-template-columns:  50% 50% ;
+        grid-gap: 20px;
+    }
+    .body_booking_page{
+        background-image: url(images/backpacker.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        display: grid;
+        margin: 0%;
+        padding: 0%;
+    }
+    
+    .check_in_button{
+        display: none;
+    }
+    
+    .travel_selector{
+        margin: 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        background-color: #b1257f;
+        justify-self: center;
+        align-self: center;
+        padding: 50px;
+        max-width: 50%;
+    }
+    
+    .from_p{
+        grid-column: 1;
+        grid-row: 1;
+        color: white;
+    }
+    
+    .from{
+        grid-column: 1;
+        grid-row: 2;
+    }
+    
+    .to_p{
+        grid-column: 1;
+        grid-row: 4;
+        color: white;
+    }
+    
+    .to{
+        grid-column: 1;
+        grid-row: 5;
+    }
+    
+    input{
+        background-color: white;
+    }
+    
+    ::placeholder{
+        color: #b1257f;
+    }
+    
+    .show_budget_calender{
+        color: white;
+        grid-column: 1;
+        grid-row: 7;
+       
+    }
+    
+    .search_button{
+        background-color:white;
+        color: #b1257f;
+        font-weight: bold;
+        font-size: 1em;
+        grid-column: 1;
+        grid-row: 9;
+        margin: 10px;
+        border: none;
+    }
+    
+    /* Here is the styling for the honest fairs buttons */
+    .Honest_fares_headline{
+        font-size: 4em;
+        margin-bottom: 20px;
+    }
+    
+    .honest_fares_button_container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .honest_fares_buttons{
+        width: 150px;
+        height: 150px;
+        margin: 40px 20px 0px 20px;
+    }
+    
+    .honest_fares_buttons_paragraf{
+        display: none;
+    }
+    
+    
+    
+    .honest_fares_luggage_heading{
+        font-size: 2em;
+    }
       }
