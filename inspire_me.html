@@ -14,12 +14,80 @@
             <button onclick="window.location.href = 'http://127.0.0.1:5500/inspire_me.html';" class="navbar_button">Inspire me</button>
             <button onclick="window.location.href = 'http://127.0.0.1:5500/booking.html';" class="navbar_button">Book your flight</button>
             <button onclick="window.location.href = 'link';" class="navbar_button">Help</button>
-        </section>
-           
+        </section>   
+        <h1>IT'S NOT JUST A JOURNEY. <br> IT'S AN ADVENTURE!</h1> 
     </header>
     <main>
-        <h1>IT'S NOT JUST A JORNEY. IT'S AN ADVENTURE!</h1>
-        <article class="boxes">
+        
+        <section class="categories">
+            <button class="sun" onclick="openSeason('summer')"><i class="fas fa-sun"></i></button>
+            <button class="leaf" onclick="openSeason('fall')"><i class="fas fa-leaf"></i></button>
+            <button class="snowflake" onclick="openSeason('winter')"><i class="far fa-snowflake"></i></button>
+            <button class="seedling" onclick="openSeason('spring')"><i class="fas fa-seedling"></i></button>
+        </section>
+
+        <article id="summer" class="boxes season">
+            <section class="offers">
+                <p class="top_picks">Top Picks</p>
+                <img src="images/venedig.jpg" alt="Venedig">
+                <p>Venedig</p>
+                <p>299,-</p>
+                <section class="including">
+                    <p>Including</p>
+                    <ul>
+                        <il>Seats</il>
+                        <il>Food and Drinks</il>
+                        <il>Luggage</il>
+                    </ul>
+                </section>
+                <p>Book now</p>
+            </section>
+            <section class="offers">
+                <p class="on_sale">On sale</p>
+                <img src="images/backpacker.jpg" alt="Venedig">
+                <p>Venedig</p>
+                <p>299,-</p>
+                <section class="including">
+                    <p>Including</p>
+                    <ul>
+                        <il>Seats</il>
+                        <il>Food and Drinks</il>
+                        <il>Luggage</il>
+                    </ul>
+                </section>
+                <p>Book now</p>
+            </section>
+            <section class="offers">
+                <img src="images/venedig.jpg" alt="Venedig">
+                <p>Venedig</p>
+                <p>299,-</p>
+                <section class="including">
+                    <p>Including</p>
+                    <ul>
+                        <il>Seats</il>
+                        <il>Food and Drinks</il>
+                        <il>Luggage</il>
+                    </ul>
+                </section>
+                <p>Book now</p>
+            </section>
+            <section class="offers">
+                <img src="images/venedig.jpg" alt="Venedig">
+                <p>Venedig</p>
+                <p>299,-</p>
+                <section class="including">
+                    <p>Including</p>
+                    <ul>
+                        <il>Seats</il>
+                        <il>Food and Drinks</il>
+                        <il>Luggage</il>
+                    </ul>
+                </section>
+                <p>Book now</p>
+            </section>
+        </article>
+
+        <article id="fall" class="boxes season">
             <section class="offers">
                 <p class="top_picks">Top Picks</p>
                 <img src="images/venedig.jpg" alt="Venedig">
@@ -79,6 +147,129 @@
                 <p>Book now</p>
             </section>
         </article>
+
+        <article id="winter" class="boxes season">
+            <section class="offers">
+                <p class="top_picks">Top Picks</p>
+                <img src="images/venedig.jpg" alt="Venedig">
+                <p>Venedig</p>
+                <p>299,-</p>
+                <section class="including">
+                    <p>Including</p>
+                    <ul>
+                        <il>Seats</il>
+                        <il>Food and Drinks</il>
+                        <il>Luggage</il>
+                    </ul>
+                </section>
+                <p>Book now</p>
+            </section>
+            <section class="offers">
+                <p class="on_sale">On sale</p>
+                <img src="images/venedig.jpg" alt="Venedig">
+                <p>Venedig</p>
+                <p>299,-</p>
+                <section class="including">
+                    <p>Including</p>
+                    <ul>
+                        <il>Seats</il>
+                        <il>Food and Drinks</il>
+                        <il>Luggage</il>
+                    </ul>
+                </section>
+                <p>Book now</p>
+            </section>
+            <section class="offers">
+                <img src="images/venedig.jpg" alt="Venedig">
+                <p>Venedig</p>
+                <p>299,-</p>
+                <section class="including">
+                    <p>Including</p>
+                    <ul>
+                        <il>Seats</il>
+                        <il>Food and Drinks</il>
+                        <il>Luggage</il>
+                    </ul>
+                </section>
+                <p>Book now</p>
+            </section>
+            <section class="offers">
+                <img src="images/venedig.jpg" alt="Venedig">
+                <p>Venedig</p>
+                <p>299,-</p>
+                <section class="including">
+                    <p>Including</p>
+                    <ul>
+                        <il>Seats</il>
+                        <il>Food and Drinks</il>
+                        <il>Luggage</il>
+                    </ul>
+                </section>
+                <p>Book now</p>
+            </section>
+        </article>
+
+        <article id="spring" class="boxes season">
+            <section class="offers">
+                <p class="top_picks">Top Picks</p>
+                <img src="images/venedig.jpg" alt="Venedig">
+                <p>Venedig</p>
+                <p>299,-</p>
+                <section class="including">
+                    <p>Including</p>
+                    <ul>
+                        <il>Seats</il>
+                        <il>Food and Drinks</il>
+                        <il>Luggage</il>
+                    </ul>
+                </section>
+                <p>Book now</p>
+            </section>
+            <section class="offers">
+                <p class="on_sale">On sale</p>
+                <img src="images/venedig.jpg" alt="Venedig">
+                <p>Venedig</p>
+                <p>299,-</p>
+                <section class="including">
+                    <p>Including</p>
+                    <ul>
+                        <il>Seats</il>
+                        <il>Food and Drinks</il>
+                        <il>Luggage</il>
+                    </ul>
+                </section>
+                <p>Book now</p>
+            </section>
+            <section class="offers">
+                <img src="images/venedig.jpg" alt="Venedig">
+                <p>Venedig</p>
+                <p>299,-</p>
+                <section class="including">
+                    <p>Including</p>
+                    <ul>
+                        <il>Seats</il>
+                        <il>Food and Drinks</il>
+                        <il>Luggage</il>
+                    </ul>
+                </section>
+                <p>Book now</p>
+            </section>
+            <section class="offers">
+                <img src="images/venedig.jpg" alt="Venedig">
+                <p>Venedig</p>
+                <p>299,-</p>
+                <section class="including">
+                    <p>Including</p>
+                    <ul>
+                        <il>Seats</il>
+                        <il>Food and Drinks</il>
+                        <il>Luggage</il>
+                    </ul>
+                </section>
+                <p>Book now</p>
+            </section>
+        </article>
+
     </main>
     <footer>
         <section class="wow_air">
@@ -109,5 +300,15 @@
             <i class="fab fa-cc-paypal"></i>
         </section>
     </footer>
+    <script>
+        function openSeason(season) {
+          var i;
+          var x = document.getElementsByClassName("season");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+          }
+          document.getElementById(season).style.display = "block";  
+        }
+        </script>
 </body>
 </html>
