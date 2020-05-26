@@ -51,63 +51,6 @@ main{
 
 
 
-
-
-footer{
-    display: grid;
-    grid-template-columns: 3fr;
-    background-color: #9B248F;
-    color: white;
-}
-.wow_air {
-    padding: 10px;
-    margin: 10px;
-    grid-column: 1/2;
-    display: flex;
-    flex-direction: column;
-}
-.fas {
-    margin: 5px;
-    font-size: 1.5em;
-}
-.wow_world {
-    grid-column: 2/3;
-    margin: 10px;
-    padding: 10px;
-}
-.wow_world p, h2{
-    padding: 5px;
-    font-size: 1.5em;
-}
-.follow_us {
-    grid-column: 3/4;
-    display: flex;
-    flex-direction: column;
-    font-size: 1.5em;
-    margin: 10px;
-    padding: 10px;
-}
-.follow_us .fab{
-    margin: 10px;
-}
-.payment_options{
-    grid-column: 1/4;
-    justify-self: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin: 10px;
-}
-.payment_options h2{
-    margin-top: 25px;
-}
-.payment_options .fab {
-    margin: 10px;
-    font-size: 4em;
-}
-
-
-
 /* Booking side starter her */ 
 .body_booking_page{
     background-image: url(images/backpacker.jpg);
@@ -119,26 +62,16 @@ footer{
     padding: 0%;
 }
 
-.check_in_button{
-    background-color: #9B248F;
-    color: white;
-    border: none;
-    font-weight: bold;
-    font-size: 1em;
-    max-width: 200px;
-    margin: 10px;
-    justify-self: end;
-}
 
 .travel_selector{
-    margin: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     background-color: white;
     justify-self: center;
     align-self: center;
-    padding: 50px;
+    padding: 20px;
+    margin: 5px 50px 200px 50px;
 }
 
 .from_p{
@@ -200,11 +133,85 @@ input{
     color: white;
     font-weight: bold;
     font-size: 1em;
-    grid-column: 2;
-    grid-row: 7;
+    grid-column: 1/3;
+    grid-row: 6;
     margin: 10px;
     border: none;
+    width: 200px;
+    justify-self: center;
 }
+
+/* The styling for the checkbox starts here - Source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_checkbox */
+/* The container */
+.container_checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    grid-row: 4;
+  }
+  
+/* Hide the browser's default checkbox */
+.container_checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    margin-top: 25px;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container_checkbox:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container_checkbox input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container_checkbox input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container_checkbox .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
 
 /* Here is the styling for the honest fairs buttons */
 .Honest_fares_headline{
@@ -213,13 +220,13 @@ input{
     text-align: center;
     grid-column: 1/5;
     grid-row: 1;
-    margin-bottom: 20px;
+    margin: 30px;
 }
 
 .honest_fares_button_container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr;
     
 }
 
@@ -238,13 +245,21 @@ input{
      margin-bottom: 5px;
 }
 
-.honest_fares_buttons_paragraf{
-    grid-row: 2;
+.Honest_fares_subheadlines{
+    font-size: 5em;
+    color: #9B248F;
+    text-align: center;
+    grid-column: 1/5;
+    grid-row: 1;
+    margin: 20px;
+}
+
+.honest_fairs_paragraph{
     text-align: center;
     color: #9B248F;
     font-weight: bold;
-    font-size: 2em;
-    margin: 5px;
+    font-size: 1.5em;
+    margin: 20px;
     align-self: start;
 }
 
@@ -297,10 +312,6 @@ input{
         padding: 0%;
     }
     
-    .check_in_button{
-        display: none;
-    }
-    
     .travel_selector{
         margin: 20px;
         display: grid;
@@ -350,6 +361,11 @@ input{
        
     }
     
+    .container_checkbox{
+        grid-column: 1;
+        grid-row: 7;
+    }
+
     .search_button{
         background-color:white;
         color: #9B248F;
@@ -367,16 +383,9 @@ input{
         margin-bottom: 20px;
     }
     
-    .honest_fares_button_container{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    
     .honest_fares_buttons{
-        width: 150px;
-        height: 150px;
+        width: 100px;
+        height: 100px;
         margin: 40px 20px 0px 20px;
     }
     
@@ -384,9 +393,66 @@ input{
         display: none;
     }
     
-    
-    
     .honest_fares_luggage_heading{
         font-size: 2em;
     }
+
+    .Honest_fares_subheadlines{
+        font-size: 3em;
+    }
       }
+
+
+
+      footer{
+        display: grid;
+        grid-template-columns: 3fr;
+        background-color: #9B248F;
+        color: white;
+    }
+    .wow_air {
+        padding: 10px;
+        margin: 10px;
+        grid-column: 1/2;
+        display: flex;
+        flex-direction: column;
+    }
+    .fas {
+        margin: 5px;
+        font-size: 1.5em;
+    }
+    .wow_world {
+        grid-column: 2/3;
+        margin: 10px;
+        padding: 10px;
+    }
+    .wow_world p, h2{
+        padding: 5px;
+        font-size: 1.5em;
+    }
+    .follow_us {
+        grid-column: 3/4;
+        display: flex;
+        flex-direction: column;
+        font-size: 1.5em;
+        margin: 10px;
+        padding: 10px;
+    }
+    .follow_us .fab{
+        margin: 10px;
+    }
+    .payment_options{
+        grid-column: 1/4;
+        justify-self: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 10px;
+    }
+    .payment_options h2{
+        margin-top: 25px;
+    }
+    .payment_options .fab {
+        margin: 10px;
+        font-size: 4em;
+    }

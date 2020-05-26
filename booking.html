@@ -12,20 +12,25 @@
         <img class="wow_air_logo" src="images/wow-logo2.png" alt="WOW Air logo">
         <section class="navbar">
             <button onclick="window.location.href = 'http://127.0.0.1:5500/inspire_me.html';" class="navbar_button">Inspire me</button>
-            <button onclick="window.location.href = 'http://127.0.0.1:5500/booking.html';" class="navbar_button">Book your flight</button>
+            <button onclick="window.location.href = 'http://127.0.0.1:5500/booking.html';" class="navbar_button">Booking</button>
+            <button onclick="window.location.href = 'link';" class="navbar_button">Check in</button>
             <button onclick="window.location.href = 'link';" class="navbar_button">Help</button>
         </section>
     </header>
 
-            <button onclick="window.location.href = 'link';" class="check_in_button">Check in</button>
+            
 
         <section class="travel_selector">
             <h3 class="from_p">From</h3>
             <input class="from" type="text" placeholder="Where are you flying from?">
             <h3 class="to_p">To</h3>
             <input class="to" type="text" placeholder="Where are you flying to?">
-            <h3 class="show_budget_calender">Show budget calender</h3>
-            <br>
+            
+            <label class="container_checkbox"><h3 class="show_budget_calender">Show budget calender</h3>
+                <input type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+              </label>
+            
             <button class="search_button">Search</button>
         </section>
 
@@ -33,15 +38,20 @@
                 <h2 class="Honest_fares_headline">Honest fares</h2>
 
             <section class="honest_fares_button_container">
-                    <button class="honest_fares_buttons" onclick="openCity('Luggage')">Luggage</button>
-                    <button class="honest_fares_buttons" onclick="openCity('Food_&_drinks')">Food & drinks</button>
-                    <button class="honest_fares_buttons" onclick="openCity('Seats')">Seats</button>
-                    <button class="honest_fares_buttons" onclick="openCity('Entertainment')">Entertainment</button>
-                    <button class="honest_fares_buttons" onclick="openCity('Refund_policy')">Refund policy</button>  
-            </section>      
+                    <button class="honest_fares_buttons" onclick="openInfo('Luggage')"><img src="images/Luggage.png" width="75" height="75"></button>
+                    <P class="honest_fairs_paragraph">Luggage</P>
+                    <button class="honest_fares_buttons" onclick="openInfo('Food_&_drinks')"><img src="images/food_and_drinks.png" width="75" height="75"></button>
+                    <p class="honest_fairs_paragraph">Food & drinks</p>
+                    <button class="honest_fares_buttons" onclick="openInfo('Seats')"><img src="images/seat.png" width="75" height="75"></button>
+                    <p class="honest_fairs_paragraph">Seats</p>
+                    <button class="honest_fares_buttons" onclick="openInfo('Entertainment')"><img src="images/entertainment.png" width="75" height="75"></button>
+                    <p class="honest_fairs_paragraph">Entertainment</p>
+                    <button class="honest_fares_buttons" onclick="openInfo('Refund_policy')"><img src="images/refund.png" width="75" height="75"></button>  
+                    <p class="honest_fairs_paragraph">Refund policy</p>
+                </section>      
 
-                  <section id="Luggage" class="w3-container city">
-                    <h2>Luggage</h2>
+                  <section id="Luggage" class="info">
+                    <h2 class="Honest_fares_subheadlines">Luggage</h2>
                     <p class="honest_fairs_paragraph">Everyone travels with luggage be it alone, as a couple or a family
                       <br>
                       In WOW world™ pack what you want and need for your journey without 
@@ -50,8 +60,8 @@
                       It is time for Honest Fares™</p>
                   </section>
                   
-                  <section id="Food_&_drinks" class="w3-container city" style="display:none">
-                    <h2>Food & drinks</h2>
+                  <section id="Food_&_drinks" class="info" style="display:none">
+                    <h2 class="Honest_fares_subheadlines">Food & drinks</h2>
                     <p class="honest_fairs_paragraph">WOW air is committed to bringing better nutrition onboard
                       <br>
                       WOW chef de cuisine Roger Wiles artfully creates delicious and healthy small 
@@ -63,8 +73,8 @@
                       WOW culinary offerings are inclusive in your Honest Fares™</p> 
                   </section>
                   
-                  <section id="Seats" class="w3-container city" style="display:none">
-                    <h2>Seats</h2>
+                  <section id="Seats" class="info" style="display:none">
+                    <h2 class="Honest_fares_subheadlines">Seats</h2>
                     <p class="honest_fairs_paragraph">Everyone travels with luggage be it alone, as a couple or a family
                       <br>
                       Whether it is a window, an aisle seat, at the back of the aircraft, an exit row or 
@@ -74,26 +84,26 @@
                       Traveling on WOW air our WOW attendants will ensure that families sit together</p>
                   </section>
                   
-                  <section id="Entertainment" class="w3-container city" style="display:none">
-                      <h2>Entertainment</h2>
+                  <section id="Entertainment" class="info" style="display:none">
+                      <h2 class="Honest_fares_subheadlines">Entertainment</h2>
                       <p class="honest_fairs_paragraph">WOW will bundle other things within Honest Fares  including 
                           <br>
                           WiFi and Entertainment services</p>
                     </section>
                   
-                    <section id="Refund_policy" class="w3-container city" style="display:none">
-                      <h2>Refund policy</h2>
+                    <section id="Refund_policy" class="info" style="display:none">
+                      <h2 class="Honest_fares_subheadlines">Refund policy</h2>
                       <p class="honest_fairs_paragraph">Missing text, if found please contact support</p>
                     </section>
                   
                   <script>
-                  function openCity(cityName) {
+                  function openInfo(travelInfo) {
                     var i;
-                    var x = document.getElementsByClassName("city");
+                    var x = document.getElementsByClassName("info");
                     for (i = 0; i < x.length; i++) {
                       x[i].style.display = "none";  
                     }
-                    document.getElementById(cityName).style.display = "block";  
+                    document.getElementById(travelInfo).style.display = "block";  
                   }
                   </script>
         
