@@ -16,7 +16,7 @@ header {
 }
 
 .navbar_button{
-    color:#b1257f;
+    color:#9B248F;
     font-size: 2em;
     margin: 40px;
     font-weight: bolder;
@@ -27,7 +27,7 @@ header {
 header p {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 2em;
-    color: #b1257f;
+    color: #9B248F;
     margin-top: 10%;
     margin-right: 100px; 
     font-weight: bolder;
@@ -120,7 +120,7 @@ footer{
 }
 
 .check_in_button{
-    background-color: #b1257f;
+    background-color: #9B248F;
     color: white;
     border: none;
     font-weight: bold;
@@ -145,7 +145,7 @@ footer{
     grid-column: 1;
     grid-row: 1;
     align-self: end;
-    color: #b1257f;
+    color: #9B248F;
     font-size: 2em;
     font-weight: bolder;
     margin: 10px 10px 0px 10px;
@@ -160,7 +160,7 @@ footer{
     grid-column: 2;
     grid-row: 1;
     align-self: end;
-    color: #b1257f;
+    color: #9B248F;
     font-size: 2em;
     font-weight: bolder;
     margin: 10px 10px 0px 10px;
@@ -172,7 +172,7 @@ footer{
 }
 
 input{
-    background-color: #b1257f;
+    background-color: #9B248F;
     border: none;
     font-weight: bold;
     font-size: 1em;
@@ -186,7 +186,7 @@ input{
 
 .show_budget_calender{
     
-    color: #b1257f;
+    color: #9B248F;
     font-weight: bold;
     font-size: 2em;
     margin: 10px;
@@ -196,7 +196,7 @@ input{
 }
 
 .search_button{
-    background-color:#b1257f;
+    background-color:#9B248F;
     color: white;
     font-weight: bold;
     font-size: 1em;
@@ -209,7 +209,7 @@ input{
 /* Here is the styling for the honest fairs buttons */
 .Honest_fares_headline{
     font-size: 8em;
-    color: #b1257f;
+    color: #9B248F;
     text-align: center;
     grid-column: 1/5;
     grid-row: 1;
@@ -224,7 +224,7 @@ input{
 }
 
 .honest_fares_buttons{
-    background-color:#b1257f;
+    background-color:#9B248F;
     color: white;
     font-weight: bold;
     font-size: 1em;
@@ -241,7 +241,7 @@ input{
 .honest_fares_buttons_paragraf{
     grid-row: 2;
     text-align: center;
-    color: #b1257f;
+    color: #9B248F;
     font-weight: bold;
     font-size: 2em;
     margin: 5px;
@@ -249,7 +249,7 @@ input{
 }
 
 .honest_fares_luggage{
-    color: #b1257f;
+    color: #9B248F;
     font-weight: bold;
     font-size: 2em;
     margin: 20px;
@@ -278,7 +278,7 @@ input{
     }
     
     .navbar_button{
-        color:#b1257f;
+        color:#9B248F;
         font-size: 2em;
         margin: 20px;
     }
@@ -306,7 +306,7 @@ input{
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        background-color: #b1257f;
+        background-color: #9B248F;
         justify-self: center;
         align-self: center;
         padding: 50px;
@@ -340,7 +340,7 @@ input{
     }
     
     ::placeholder{
-        color: #b1257f;
+        color: #9B248F;
     }
     
     .show_budget_calender{
@@ -352,7 +352,7 @@ input{
     
     .search_button{
         background-color:white;
-        color: #b1257f;
+        color: #9B248F;
         font-weight: bold;
         font-size: 1em;
         grid-column: 1;
