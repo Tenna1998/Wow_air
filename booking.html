@@ -31,34 +31,72 @@
 
         <section>
                 <h2 class="Honest_fares_headline">Honest fares</h2>
+
             <section class="honest_fares_button_container">
+                    <button class="honest_fares_buttons" onclick="openCity('Luggage')">Luggage</button>
+                    <button class="honest_fares_buttons" onclick="openCity('Food_&_drinks')">Food & drinks</button>
+                    <button class="honest_fares_buttons" onclick="openCity('Seats')">Seats</button>
+                    <button class="honest_fares_buttons" onclick="openCity('Entertainment')">Entertainment</button>
+                    <button class="honest_fares_buttons" onclick="openCity('Refund_policy')">Refund policy</button>  
+            </section>      
 
-                <button onclick="window.location.href = 'http://127.0.0.1:5500/booking.html';" class="honest_fares_buttons">Luggage</button>
-                <p class="honest_fares_buttons_paragraf">Luggage</p>
-
-                <button onclick="window.location.href = 'http://127.0.0.1:5500/foodsanddrinks.html';" class="honest_fares_buttons">Food & drinks</button>
-                <p class="honest_fares_buttons_paragraf">Food & drinks</p>
-
-                <button onclick="window.location.href = 'http://127.0.0.1:5500/seats.html';" class="honest_fares_buttons">Seats</button>
-                <p class="honest_fares_buttons_paragraf">Seats</p>
-
-                <button onclick="window.location.href = 'http://127.0.0.1:5500/entertainment.html';" class="honest_fares_buttons">Entertainment</button>
-                <p class="honest_fares_buttons_paragraf">Entertainment</p>
-
-                <button onclick="window.location.href = 'http://127.0.0.1:5500/refund_policy.html';" class="honest_fares_buttons">Refund policy</button>
-                <p class="honest_fares_buttons_paragraf">Refund policy</p>
-            </section>
-            <br>
-            <article class="honest_fares_luggage">
-                <h2 class="honest_fares_luggage_heading">Luggage</h2>
-                <p>Everyone travels with luggage be it alone, as a couple or a family
-                    <br>
-                    In WOW world™ pack what you want and need for your journey without 
-                    having to worry about overweight charges
-                    <br>
-                    It is time for Honest Fares™</p>
-            </article>
-        </section>
+                  <section id="Luggage" class="w3-container city">
+                    <h2>Luggage</h2>
+                    <p class="honest_fairs_paragraph">Everyone travels with luggage be it alone, as a couple or a family
+                      <br>
+                      In WOW world™ pack what you want and need for your journey without 
+                      having to worry about overweight charges
+                      <br>
+                      It is time for Honest Fares™</p>
+                  </section>
+                  
+                  <section id="Food_&_drinks" class="w3-container city" style="display:none">
+                    <h2>Food & drinks</h2>
+                    <p class="honest_fairs_paragraph">WOW air is committed to bringing better nutrition onboard
+                      <br>
+                      WOW chef de cuisine Roger Wiles artfully creates delicious and healthy small 
+                      plates and meal choices that vary seasonally
+                      <br>
+                      WOW water from Austria, Iceland and Italy. . . Fresh fruits and juices from 
+                      Sicily and beyond to custom blended teas and coffees from Africa to Austria
+                      <br>
+                      WOW culinary offerings are inclusive in your Honest Fares™</p> 
+                  </section>
+                  
+                  <section id="Seats" class="w3-container city" style="display:none">
+                    <h2>Seats</h2>
+                    <p class="honest_fairs_paragraph">Everyone travels with luggage be it alone, as a couple or a family
+                      <br>
+                      Whether it is a window, an aisle seat, at the back of the aircraft, an exit row or 
+                      in front of the aircraft, we want you to be happy with your seat choice without 
+                      paying a significant surcharge for that choice
+                      <br>
+                      Traveling on WOW air our WOW attendants will ensure that families sit together</p>
+                  </section>
+                  
+                  <section id="Entertainment" class="w3-container city" style="display:none">
+                      <h2>Entertainment</h2>
+                      <p class="honest_fairs_paragraph">WOW will bundle other things within Honest Fares  including 
+                          <br>
+                          WiFi and Entertainment services</p>
+                    </section>
+                  
+                    <section id="Refund_policy" class="w3-container city" style="display:none">
+                      <h2>Refund policy</h2>
+                      <p class="honest_fairs_paragraph">Missing text, if found please contact support</p>
+                    </section>
+                  
+                  <script>
+                  function openCity(cityName) {
+                    var i;
+                    var x = document.getElementsByClassName("city");
+                    for (i = 0; i < x.length; i++) {
+                      x[i].style.display = "none";  
+                    }
+                    document.getElementById(cityName).style.display = "block";  
+                  }
+                  </script>
+        
 
     <footer>
         <section class="wow_air">
