@@ -5,6 +5,7 @@
 header {
     display: grid;
     grid-template-columns: 20% 80%;
+    grid-template-rows: 20% 80%;
     min-height: 100vh;
     background-image: url(images/backpacker.jpg);
     background-repeat: no-repeat;
@@ -19,6 +20,8 @@ header {
 }
 .navbar{
     justify-self: right;
+    display: flex;
+    flex-direction: row;
 }
 
 .navbar_button{
@@ -31,6 +34,13 @@ header {
     background-color: transparent;
     border: none;
     cursor: pointer;
+}
+.ckeckin{
+    background-color: #b1257f;
+    padding: 10px;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 5px;
 }
 .active {
     color: #b1257f;
@@ -180,7 +190,7 @@ main{
     grid-column: 1/3;
     grid-row: 1/2;
     position: absolute;
-    margin-top: 275px;
+    margin-top: 27%;
     color: white;
     background-color: black;
     opacity: 0.8;
@@ -190,16 +200,19 @@ main{
 h3{
     font-size: 2.5em;
     padding: 10px;
+    margin-top: 10px;
     padding-left: 20px;
 }
 .price {
     font-size: 2.5em;
     padding: 10px;
+    margin-top: 10px;
     justify-self: center;
 }
 .including{
     font-size: 1.2em;
     padding: 10px;
+    padding-top: 30px;
     padding-left: 30px;
     padding-bottom: 20px;
 }
