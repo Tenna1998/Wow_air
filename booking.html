@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booking</title>
     <link rel="stylesheet" href="wow_air.css">
+    <link rel="stylesheet" href="https://use.typekit.net/iqo5bdf.css">
     <script src="https://kit.fontawesome.com/2921969fed.js" crossorigin="anonymous"></script>
 </head>
 <body class="body_booking_page">
@@ -38,19 +39,20 @@
                 <h2 class="Honest_fares_headline">Honest fares</h2>
 
             <section class="honest_fares_button_container">
-                    <button class="honest_fares_buttons" onclick="openInfo('Luggage')"><img src="images/Luggage.png" width="75" height="75"></button>
+                    <button id="defaultOpen_honest_fares" class="honest_fares_buttons" onclick="openInfo(event, 'Luggage')"><img src="images/Luggage.png" width="75" height="75"></button>
                     <P class="honest_fairs_paragraph">Luggage</P>
-                    <button class="honest_fares_buttons" onclick="openInfo('Food_&_drinks')"><img src="images/food_and_drinks.png" width="75" height="75"></button>
+                    <button class="honest_fares_buttons" onclick="openInfo(event, 'Food_&_drinks')"><img src="images/food_and_drinks.png" width="75" height="75"></button>
                     <p class="honest_fairs_paragraph">Food & drinks</p>
-                    <button class="honest_fares_buttons" onclick="openInfo('Seats')"><img src="images/seat.png" width="75" height="75"></button>
+                    <button class="honest_fares_buttons" onclick="openInfo(event, 'Seats')"><img src="images/seat.png" width="75" height="75"></button>
                     <p class="honest_fairs_paragraph">Seats</p>
-                    <button class="honest_fares_buttons" onclick="openInfo('Entertainment')"><img src="images/entertainment.png" width="75" height="75"></button>
+                    <button class="honest_fares_buttons" onclick="openInfo(event, 'Entertainment')"><img src="images/entertainment.png" width="75" height="75"></button>
                     <p class="honest_fairs_paragraph">Entertainment</p>
-                    <button class="honest_fares_buttons" onclick="openInfo('Refund_policy')"><img src="images/refund.png" width="75" height="75"></button>  
+                    <button class="honest_fares_buttons" onclick="openInfo(event, 'Refund_policy')"><img src="images/refund.png" width="75" height="75"></button>  
                     <p class="honest_fairs_paragraph">Refund policy</p>
                 </section>      
 
                   <section id="Luggage" class="info">
+                    <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
                     <h2 class="Honest_fares_subheadlines">Luggage</h2>
                     <p class="honest_fairs_paragraph">Everyone travels with luggage be it alone, as a couple or a family
                       <br>
@@ -61,6 +63,7 @@
                   </section>
                   
                   <section id="Food_&_drinks" class="info" style="display:none">
+                    <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
                     <h2 class="Honest_fares_subheadlines">Food & drinks</h2>
                     <p class="honest_fairs_paragraph">WOW air is committed to bringing better nutrition onboard
                       <br>
@@ -74,6 +77,7 @@
                   </section>
                   
                   <section id="Seats" class="info" style="display:none">
+                    <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
                     <h2 class="Honest_fares_subheadlines">Seats</h2>
                     <p class="honest_fairs_paragraph">Everyone travels with luggage be it alone, as a couple or a family
                       <br>
@@ -85,6 +89,7 @@
                   </section>
                   
                   <section id="Entertainment" class="info" style="display:none">
+                    <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
                       <h2 class="Honest_fares_subheadlines">Entertainment</h2>
                       <p class="honest_fairs_paragraph">WOW will bundle other things within Honest Fares  including 
                           <br>
@@ -92,50 +97,62 @@
                     </section>
                   
                     <section id="Refund_policy" class="info" style="display:none">
+                      <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
                       <h2 class="Honest_fares_subheadlines">Refund policy</h2>
                       <p class="honest_fairs_paragraph">Missing text, if found please contact support</p>
                     </section>
                   
+                    <footer>
+                      <section class="wow_air">
+                          <h2>WOW air</h2>
+                          <i class="fas fa-envelope"> Guests: wowair@wowair.com</i>
+                          <i class="fas fa-envelope"> Cargo: wowaircargo@wowaircargo.com</i>
+                          <i class="fas fa-envelope"> Media: media@wowair.com</i>
+                          <i class="fas fa-phone-alt"> +1 703 479 9300</i>
+                      </section>
+                      <section class="wow_world">
+                          <h2>WOW World</h2>
+                          <p>News from WOW</p>
+                          <p>About WOW</p>
+                          <p>WOW air Cargo</p>
+                          <p>Honest Fares</p>
+                          <p>Wow Magazine</p>
+                      </section>
+                      <section class="follow_us">
+                          <h2>Follow us</h2>
+                          <i class="fab fa-facebook-square"> Facebook</i>
+                          <i class="fab fa-instagram"> Instagram</i>
+                          <i class="fab fa-twitter"> Twitter</i>
+                      </section>
+                      <section class="payment_options">
+                          <h2>Payment options</h2>
+                          <i class="fab fa-cc-mastercard"></i>
+                          <i class="fab fa-cc-visa"></i>
+                          <i class="fab fa-cc-paypal"></i>
+                      </section>
+                  </footer>
+
                   <script>
-                  function openInfo(travelInfo) {
-                    var i;
-                    var x = document.getElementsByClassName("info");
-                    for (i = 0; i < x.length; i++) {
-                      x[i].style.display = "none";  
+                      /* makes the buttons in honest fares change color when active/clicked */
+                      function openInfo(evt, travelInfo) {
+                      let i, info, honest_fares_buttons;
+                      info = document.getElementsByClassName("info");
+                      for (i = 0; i < info.length; i++) {
+                      info[i].style.display = "none";
+                      }
+                      honest_fares_buttons = document.getElementsByClassName("honest_fares_buttons");
+                      for (i = 0; i < honest_fares_buttons.length; i++) {
+                        honest_fares_buttons[i].className = honest_fares_buttons[i].className.replace(" active", "");
+                      }
+                      document.getElementById(travelInfo).style.display = "block";
+                      evt.currentTarget.className += " active";
                     }
-                    document.getElementById(travelInfo).style.display = "block";  
-                  }
+
+                    // Get the element with id="defaultOpen" and click on it
+                    document.getElementById("defaultOpen_honest_fares").click();
                   </script>
         
 
-    <footer>
-        <section class="wow_air">
-            <h2>WOW air</h2>
-            <i class="fas fa-envelope"> Guests: wowair@wowair.com</i>
-            <i class="fas fa-envelope"> Cargo: wowaircargo@wowaircargo.com</i>
-            <i class="fas fa-envelope"> Media: media@wowair.com</i>
-            <i class="fas fa-phone-alt"> +1 703 479 9300</i>
-        </section>
-        <section class="wow_world">
-            <h2>WOW World</h2>
-            <p>News from WOW</p>
-            <p>About WOW</p>
-            <p>WOW air Cargo</p>
-            <p>Honest Fares</p>
-            <p>Wow Magazine</p>
-        </section>
-        <section class="follow_us">
-            <h2>Follow us</h2>
-            <i class="fab fa-facebook-square"> Facebook</i>
-            <i class="fab fa-instagram"> Instagram</i>
-            <i class="fab fa-twitter"> Twitter</i>
-        </section>
-        <section class="payment_options">
-            <h2>Payment options</h2>
-            <i class="fab fa-cc-mastercard"></i>
-            <i class="fab fa-cc-visa"></i>
-            <i class="fab fa-cc-paypal"></i>
-        </section>
-    </footer>
+
 </body>
 </html>
