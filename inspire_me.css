@@ -24,27 +24,39 @@ header {
 .navbar_button{
     grid-column: 1/2;
     grid-row: 2/3;
-    color:#b1257f;
+    color:white;
     font-size: 2em;
     margin: 40px;
     font-weight: bolder;
     background-color: transparent;
     border: none;
+    cursor: pointer;
+}
+.active {
+    color: #b1257f;
 }
 
-header p {
-    font-family: Arial, Helvetica, sans-serif;
+.navbar p {
+    font-family: proxima-nova, sans-serif;
     font-size: 2em;
     color: #b1257f;
     margin-top: 10%;
     margin-right: 100px; 
     font-weight: bolder;
 }
-h1{
+.overskrift{
     grid-column: 1/3;
     grid-row: 2/3;
     align-self: flex-end;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: proxima-nova, sans-serif;
+    margin: 10px;
+}
+.overskrift p{
+    color: white;
+    font-size: 2em;
+    margin-left: 10px;
+}
+h1{
     font-size: 3.5em;
     color: white;
     border-style: solid;
@@ -64,47 +76,64 @@ main{
     grid-column: 1/5;
     grid-row: 1/2;
     justify-self: center;
+    display: grid;
+    grid-template-rows: 4fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     margin-bottom: 20px;
     margin-top: 20px;
+}
+.categories_text{
+    font-family: proxima-nova, sans-serif;
+    color: rgb(91, 103, 116);
+    grid-row: 2;
+    justify-self: center;
 }
 .sun{
     border: none;
     color:white;
     background-color: #FACC00;
     border-radius: 100%;
-    margin: 20px;
+    margin: 25px;
     padding: 25px;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.25), 0 17px 50px 0 rgba(0,0,0,0.25);
+    cursor: pointer;
 }
 .leaf{
     border: none;
     color: white;
     background-color: #FF8319;
     border-radius: 100%;
-    margin: 20px;
+    margin: 25px;
     padding: 25px 20px 25px 20px;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.25), 0 17px 50px 0 rgba(0,0,0,0.25);
+    cursor: pointer;
 }
 .snowflake{
     border: none;
     color: white;
     background-color: #84F1FF;
     border-radius: 100%;
-    margin: 20px;
+    margin: 25px;
     padding: 25px 30px 25px 30px;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.25), 0 17px 50px 0 rgba(0,0,0,0.25);
-}.seedling{
+    cursor: pointer;
+}
+.seedling{
     border: none;
     color: white;
     background-color: #A7F27F;
     border-radius: 100%;
-    margin: 20px;
+    margin: 25px;
     padding: 25px;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.25), 0 17px 50px 0 rgba(0,0,0,0.25);
+    cursor: pointer;
 }
 .sun:hover, .leaf:hover, .snowflake:hover, .seedling:hover{
     color: #9B248F;
     background-color: white;
+}
+.sun.active,  .leaf.active, .snowflake.active, .seedling.active{
+    background-color: blue;
 }
 .fa-sun, .fa-leaf, .fa-snowflake, .fa-seedling{
     font-size: 6em;
@@ -112,6 +141,8 @@ main{
 #fall, #winter, #spring {
     display: none;
 }
+
+
 .boxes{
     grid-column: 2/4;
     grid-row: 2/3;
@@ -120,6 +151,7 @@ main{
     grid-gap: 20px;  
 }
 .offers {
+    font-family: proxima-nova, sans-serif;
     display: grid;
     grid-template-columns: 60% 40%;
     box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.44);
@@ -130,23 +162,78 @@ main{
 }
 .top_picks {
     grid-column: 1/3;
-    font-family: proxima;
+    font-family: proxima-nova, sans-serif;
+    font-size: 2em;
     background-color:#9B248F;
     color: white;
-    padding: 5px;
+    padding: 10px;
+    position: absolute;
 }
 .on_sale {
     grid-column: 1/3;
     background-color: #FACC00;
+    padding: 10px;
+    font-size: 2em;
+    position: absolute;
+}
+.pexels_img {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    position: absolute;
+    margin-top: 275px;
+    color: white;
+    background-color: black;
+    opacity: 0.8;
     padding: 5px;
+}
+
+h3{
+    font-size: 2.5em;
+    padding: 10px;
+    padding-left: 20px;
+}
+.price {
+    font-size: 2.5em;
+    padding: 10px;
+    justify-self: center;
+}
+.including{
+    font-size: 1.2em;
+    padding: 10px;
+    padding-left: 30px;
+    padding-bottom: 20px;
+}
+.including p{
+    padding-bottom: 10px;
+}
+.booking {
+    font-size: 2em;
+    padding: 10px;
+    align-self: center;
+    color: white;
+    background-color: #9B248F;
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
+    box-shadow: 0 2px 16px 0 rgba(0,0,0,0.25), 0 2px 10px 0 rgba(0,0,0,0.25);
+}
+.booking:hover{
+    opacity: 0.7;
+}
+.sale{
+    color: black ;
+    background-color: #FACC00;
+    width: fit-content;
+    height: fit-content;
 }
 
 
 
 /* Footer section starts here */
 footer{
+    font-family: proxima-nova, sans-serif;
     display: grid;
-    grid-template-columns: 3fr;
+    grid-template-columns: 40% 30% 30%;
     background-color: #9B248F;
     color: white;
 }
@@ -154,11 +241,22 @@ footer{
     padding: 10px;
     margin: 10px;
     grid-column: 1/2;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 10% 90%;
 }
-.fa_envelope, .fa_phone_alt {
-    margin: 5px;
+.wow_air h2{
+    grid-column: 1/3;
+    font-size: 1.5em;
+}
+.wow_air p{
+    margin-left: 5px;
+    font-size: 1.2em;
+    align-self: center;
+    cursor: pointer;
+}
+.email, .telefon{
+    font-family: proxima-nova, sans-serif;
+    margin: 15px;
     font-size: 1.5em;
 }
 .wow_world {
@@ -166,21 +264,31 @@ footer{
     margin: 10px;
     padding: 10px;
 }
-.wow_world p, h2{
-    padding: 5px;
+.wow_world h2{
     font-size: 1.5em;
+}
+.wow_world p{
+    padding: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
 }
 .follow_us {
     grid-column: 3/4;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 10% 90%;
     font-size: 1.5em;
     margin: 10px;
     padding: 10px;
 }
-.follow_us .fab{
-    margin: 10px;
+.follow_us h2{
+    grid-column: 1/3;
+    font-size: 1em;
 }
+.follow_us p{
+    font-size: 0.8em;
+    cursor: pointer;
+}
+
 .payment_options{
     grid-column: 1/4;
     justify-self: center;
