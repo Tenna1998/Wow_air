@@ -247,6 +247,10 @@ input{
      outline: none;
 }
 
+.fa-credit-card, .fa-wifi, .fa-utensils, .fa-suitcase{
+    font-size: 4em;
+}
+
 /* source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_tabs_close */
 /* Change background color of buttons on hover */
 .honest_fares_buttons:hover {
