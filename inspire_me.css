@@ -36,20 +36,20 @@ header {
     cursor: pointer;
 }
 .ckeckin{
-    background-color: #b1257f;
+    background-color: #9B248F;
     padding: 10px;
     width: fit-content;
     height: fit-content;
     border-radius: 5px;
 }
 .active {
-    color: #b1257f;
+    color: #9B248F;
 }
 
 .navbar p {
     font-family: proxima-nova, sans-serif;
     font-size: 2em;
-    color: #b1257f;
+    color: #9B248F;
     margin-top: 10%;
     margin-right: 100px; 
     font-weight: bolder;
@@ -84,7 +84,7 @@ main{
 }
 .categories {
     grid-column: 1/5;
-    grid-row: 1/2;
+    grid-row: 1;
     justify-self: center;
     display: grid;
     grid-template-rows: 4fr 1fr;
