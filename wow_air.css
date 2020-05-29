@@ -218,6 +218,7 @@ input{
 /*styling for the honest fairs buttons */
 .Honest_fares_headline{
     font-size: 8em;
+    font-family: proxima-nova, sans-serif;
     color: #9B248F;
     text-align: center;
     grid-column: 1/5;
@@ -265,6 +266,7 @@ input{
 
 .Honest_fares_subheadlines{
     font-size: 5em;
+    font-family: proxima-nova, sans-serif;
     color: #9B248F;
     text-align: center;
     grid-column: 1/5;
@@ -297,7 +299,7 @@ input{
 
 
 /* making the page responsive */
-@media only screen and (max-width: 1280px){
+@media only screen and (max-width: 1000px){
     header {
         display: flex;
         flex-direction: row;
