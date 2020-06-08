@@ -29,6 +29,7 @@ header {
     grid-row: 2/3;
     color:white;
     font-size: 2em;
+    text-shadow: 1px 1px 1px #9B248F;
     margin: 40px;
     font-weight: bolder;
     background-color: transparent;
