@@ -19,8 +19,6 @@
         </section>
     </header>
 
-            
-
         <section class="travel_selector">
             <h3 class="from_p">From</h3>
             <input class="from" type="text" placeholder="Where are you flying from?">
@@ -43,7 +41,7 @@
                     <P class="honest_fairs_paragraph">Luggage</P>
                     <button class="honest_fares_buttons" onclick="openInfo(event, 'Food_&_drinks')"><i class="fas fa-utensils"></i></button>
                     <p class="honest_fairs_paragraph">Food & drinks</p>
-                    <button class="honest_fares_buttons" onclick="openInfo(event, 'Seats')"><img src="images/seat.png" width="75" height="90"></button>
+                    <button class="honest_fares_buttons" onclick="openInfo(event, 'Seats')"><img src="images/seat.png" alt="seats" width="75" height="90"></button>
                     <p class="honest_fairs_paragraph">Seats</p>
                     <button class="honest_fares_buttons" onclick="openInfo(event, 'Entertainment')"><i class="fas fa-wifi"></i></button>
                     <p class="honest_fairs_paragraph">Entertainment</p>
@@ -52,7 +50,7 @@
                 </section>      
 
                   <section id="Luggage" class="info">
-                    <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+                    <span onclick="this.parentElement.style.display='none'" class="topright">&times;</span>
                     <h2 class="Honest_fares_subheadlines">Luggage</h2>
                     <p class="honest_fairs_paragraph">Everyone travels with luggage be it alone, as a couple or a family
                       <br>
@@ -63,7 +61,7 @@
                   </section>
                   
                   <section id="Food_&_drinks" class="info" style="display:none">
-                    <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+                    <span onclick="this.parentElement.style.display='none'" class="topright">&times;</span>
                     <h2 class="Honest_fares_subheadlines">Food & drinks</h2>
                     <p class="honest_fairs_paragraph">WOW air is committed to bringing better nutrition onboard
                       <br>
@@ -77,7 +75,7 @@
                   </section>
                   
                   <section id="Seats" class="info" style="display:none">
-                    <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+                    <span onclick="this.parentElement.style.display='none'" class="topright">&times;</span>
                     <h2 class="Honest_fares_subheadlines">Seats</h2>
                     <p class="honest_fairs_paragraph">Everyone travels with luggage be it alone, as a couple or a family
                       <br>
@@ -89,7 +87,7 @@
                   </section>
                   
                   <section id="Entertainment" class="info" style="display:none">
-                    <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+                    <span onclick="this.parentElement.style.display='none'" class="topright">&times;</span>
                       <h2 class="Honest_fares_subheadlines">Entertainment</h2>
                       <p class="honest_fairs_paragraph">WOW will bundle other things within Honest Fares  including 
                           <br>
@@ -97,11 +95,12 @@
                     </section>
                   
                     <section id="Refund_policy" class="info" style="display:none">
-                      <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+                      <span onclick="this.parentElement.style.display='none'" class="topright">&times;</span>
                       <h2 class="Honest_fares_subheadlines">Refund policy</h2>
                       <p class="honest_fairs_paragraph">...</p>
                     </section>
-                  
+        </section>
+
                     <footer>
                       <section class="wow_air">
                           <h2>WOW air</h2>
@@ -158,8 +157,5 @@
                     // Get the element with id="defaultOpen" and click on it
                     document.getElementById("defaultOpen_honest_fares").click();
                   </script>
-        
-
-
-</body>
+        </body>
 </html>

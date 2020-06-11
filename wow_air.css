@@ -8,7 +8,6 @@
     padding: 0%;
     height: 100vh;
 }
-
 header {
     display: flex;
     flex-direction: row;
@@ -19,6 +18,29 @@ header {
     height: 150px;
     margin: 10px;
 }
+
+/* Source: https://stackoverflow.com/questions/27259259/css-image-flip-on-load */
+.wow_air_logo {
+    -webkit-animation: flip 2s;
+    animation: flip 2s;
+  }
+  @-webkit-keyframes flip {
+    from {
+      transform: rotateY(90deg)
+    }
+    to {
+      transform: rotateY(0deg)
+    }
+  }
+  @keyframes flip {
+    from {
+      transform: rotateY(90deg)
+    }
+    to {
+      transform: rotateY(0deg)
+    }
+  }
+
 .navbar{
     display: flex;
     flex-direction: row;
@@ -26,8 +48,8 @@ header {
 
 .navbar_button{
     color:white;
+    text-shadow: 1px 1px 1px#9B248F;
     font-size: 2em;
-    text-shadow: 1px 1px 1px #9B248F;
     margin: 40px;
     font-weight: bolder;
     background-color: transparent;
@@ -38,7 +60,6 @@ header {
 
 .checkin{
     background-color: #9B248F;
-    
     padding: 10px;
     width: fit-content;
     height: fit-content;
@@ -48,6 +69,7 @@ header {
 
 .booking_button{
     color: #9B248F;
+    text-shadow: none;
 }
 
 
@@ -62,7 +84,7 @@ header {
     justify-self: center;
     align-self: center;
     padding: 20px;
-    margin: 5px 50px 400px 50px;
+    margin: 5px 50px 500px 50px;
     border-radius: 5px;
 }
 
@@ -299,8 +321,87 @@ input{
 }
 
 
+/* Footer section starts here */
+footer{
+    font-family: proxima-nova, sans-serif;
+    display: grid;
+    grid-template-columns: 40% 30% 30%;
+    background-color: #9B248F;
+    color: white;
+}
+.wow_air {
+    padding: 10px;
+    margin: 10px;
+    grid-column: 1/2;
+    display: grid;
+    grid-template-columns: 10% 90%;
+}
+.wow_air h2{
+    grid-column: 1/3;
+    font-size: 1.5em;
+}
+.wow_air p{
+    margin-left: 5px;
+    font-size: 1.2em;
+    align-self: center;
+    cursor: pointer;
+}
+.email, .telefon{
+    font-family: proxima-nova, sans-serif;
+    margin: 15px;
+    font-size: 1.5em;
+}
+.wow_world {
+    grid-column: 2/3;
+    margin: 10px;
+    padding: 10px;
+}
+.wow_world h2{
+    font-size: 1.5em;
+}
+.wow_world p{
+    padding: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    padding: 0%;
+}
+.follow_us {
+    grid-column: 3/4;
+    display: grid;
+    grid-template-columns: 10% 90%;
+    font-size: 1.5em;
+    margin: 10px;
+    padding: 10px;
+}
+.follow_us h2{
+    grid-column: 1/3;
+    font-size: 1em;
+    margin-bottom: 0px;
+}
+.follow_us p{
+    font-size: 0.8em;
+    cursor: pointer;
+    margin: 0px;
+}
+
+.payment_options{
+    grid-column: 1/4;
+    justify-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 10px;
+}
+.payment_options h2{
+    margin-top: 25px;
+}
+.payment_options .fab {
+    margin: 10px;
+    font-size: 4em;
+}
+
 /* making the page responsive */
-@media only screen and (max-width: 1000px){
+@media only screen and (max-width: 1175px){
     header {
         display: flex;
         flex-direction: row;
@@ -434,83 +535,59 @@ input{
     }
       }
 
+      @media only screen and (max-width: 1050px){
+        .wow_air {
+            padding: 5px;
+            margin: 5px;
+        }
+        .wow_air h2{
+            font-size: 1em;
+        }
+        .wow_air p{
+            font-size: 0.9em;
+        }
+        .email, .telefon{
+            font-size: 0.9em;
+        }
+        .wow_world{
+            padding: 5px;
+            margin: 5px
+        }
+        .wow_world h2{
+            font-size: 1em;
+        }
+        .wow_world p{
+            font-size: 0.9em;
+        }
+        .follow_us{
+            padding: 5px;
+            margin: 5px
+        }
+        .follow_us {
+            font-size: 0.9em;
+        }
+        .follow_us h2{
+            font-size: 1.2em;
+        }
+        .follow_us p{
+            font-size: 0.9em;
+        }
+        }
+
+/* Phone screens size */
+      @media only screen and (max-width: 760px){
+            .body_booking_page{
+                background-image: none;
+            }
+            .navbar_button{
+                color: black;
+                text-shadow: none;
+            }
+            .booking_button{
+                color: #9B248F;
+                text-shadow: none;
+            }
+        }
 
 
-/* Footer section starts here */
-footer{
-    font-family: proxima-nova, sans-serif;
-    display: grid;
-    grid-template-columns: 40% 30% 30%;
-    background-color: #9B248F;
-    color: white;
-}
-.wow_air {
-    padding: 10px;
-    margin: 10px;
-    grid-column: 1/2;
-    display: grid;
-    grid-template-columns: 10% 90%;
-}
-.wow_air h2{
-    grid-column: 1/3;
-    font-size: 1.5em;
-}
-.wow_air p{
-    margin-left: 5px;
-    font-size: 1.2em;
-    align-self: center;
-    cursor: pointer;
-}
-.email, .telefon{
-    font-family: proxima-nova, sans-serif;
-    margin: 15px;
-    font-size: 1.5em;
-}
-.wow_world {
-    grid-column: 2/3;
-    margin: 10px;
-    padding: 10px;
-}
-.wow_world h2{
-    font-size: 1.5em;
-}
-.wow_world p{
-    padding: 5px;
-    font-size: 1.2em;
-    cursor: pointer;
-    padding: 0%;
-}
-.follow_us {
-    grid-column: 3/4;
-    display: grid;
-    grid-template-columns: 10% 90%;
-    font-size: 1.5em;
-    margin: 10px;
-    padding: 10px;
-}
-.follow_us h2{
-    grid-column: 1/3;
-    font-size: 1em;
-    margin-bottom: 0px;
-}
-.follow_us p{
-    font-size: 0.8em;
-    cursor: pointer;
-    margin: 0px;
-}
 
-.payment_options{
-    grid-column: 1/4;
-    justify-self: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin: 10px;
-}
-.payment_options h2{
-    margin-top: 25px;
-}
-.payment_options .fab {
-    margin: 10px;
-    font-size: 4em;
-}
