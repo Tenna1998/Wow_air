@@ -18,6 +18,29 @@ header {
     height: 150px;
     margin: 10px;
 }
+
+/* Source: https://stackoverflow.com/questions/27259259/css-image-flip-on-load */
+.wow_air_logo {
+    -webkit-animation: flip 2s;
+    animation: flip 2s;
+  }
+  @-webkit-keyframes flip {
+    from {
+      transform: rotateY(90deg)
+    }
+    to {
+      transform: rotateY(0deg)
+    }
+  }
+  @keyframes flip {
+    from {
+      transform: rotateY(90deg)
+    }
+    to {
+      transform: rotateY(0deg)
+    }
+  }
+
 .navbar{
     justify-self: right;
     display: flex;
